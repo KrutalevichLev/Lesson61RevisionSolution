@@ -22,6 +22,11 @@ double calculate_arithmetical_mean_of_nonzero_elements(int* array,int size) {
 		}
 	}
 
+	return avg(sum,count);
+}
+
+double avg(int sum, int count) {
+
 	if (count == 0) {
 		return 0;
 	}
