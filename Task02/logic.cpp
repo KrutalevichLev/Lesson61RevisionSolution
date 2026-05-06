@@ -16,9 +16,9 @@ double calculate_arithmetical_mean_of_nonzero_elements(int* array,int size) {
 
 	for (int i = 0; i < size; i++)
 	{
-		if (array[i] != 0) {
+		if (*(array + i) != 0) {
 			count++;
-			sum += array[i];
+			sum += *(array + i);
 		}
 	}
 
