@@ -12,22 +12,22 @@ int count_local_extreme_numbers(int* array, int size) {
 
     int count = 0;
 
-    if (array[0] != array[1]) {
+    if (*(array) != *(array + 1)) {
         count++; 
     }
 
    
     for (int i = 1; i < size - 1; i++) {
         
-        if (array[i] > array[i - 1] && array[i] > array[i + 1]) {
+        if (*(array + i) > *(array + i - 1) && *(array + i) > *(array + i + 1)) {
             count++;
         }
-        else if (array[i] < array[i - 1] && array[i] < array[i + 1]) {
+        else if (*(array + i) < *(array + i - 1) && *(array + i) < *(array + i + 1)) {
             count++;
         }
     }
 
-    if (array[size - 1] != array[size - 2]) {
+    if (*(array + size - 1) != *(array + size - 2)) {
         count++; 
     }
 
