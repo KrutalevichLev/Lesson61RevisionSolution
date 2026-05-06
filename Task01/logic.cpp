@@ -19,24 +19,20 @@
 // Функция для упорядочивания трех переменных (a >= b >= c)
 #include "logic.h"
 
-void get_in_order(int* a, int* b, int* c) {
-    int temp;
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
+void get_in_order(int* a, int* b, int* c) {
     if (*a < *b) {
         swap(a, b);
     }
-
     if (*a < *c) {
         swap(a, c);
     }
-
     if (*b < *c) {
         swap(b, c);
     }
-}
-
-void swap(int* a, int* b) {
-    int temp = *b;
-    *b = *a;
-    *a = temp;
 }

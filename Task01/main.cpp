@@ -3,7 +3,7 @@
 int main() {
 	int a, b, c;
 
-	cout << "Input three number: ";
+	cout << "Enter three number: ";
 	cin >> a >> b >> c;
 
 	print("Befor: \nA = " + to_string(a) + "\nB = " + to_string(b) + "\nC = " + to_string(c));
